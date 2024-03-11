@@ -21,6 +21,7 @@ import { COLORS, icons, SIZES } from "../../constans";
 import useFetch from "../../hook/useFatch";
 
 const tabs = ["About", "Qualifications", "Responsibilities"];
+
 const JobDetails = () => {
   const router = useRouter();
   const params = useGlobalSearchParams();

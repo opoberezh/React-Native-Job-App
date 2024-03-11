@@ -6,7 +6,8 @@ import { icons, SIZES } from "../../../constans";
 
 const jobTypes = ["Full-time", "Part-time", "Contractor"];
 
-const Welcome = () => {
+const Welcome = ({searchTerm, setSearchTerm, handleClick}) => {
+
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-time");
 
@@ -20,14 +21,14 @@ const Welcome = () => {
         <View style={styles.searchWrapper}>
           <TextInput
             style={styles.searchInput}
-            value=""
-            onChangeText={() => {}}
+            value={searchTerm}
+            onChangeText={(text) => setSearchTerm(text)}
             placeholder="What are you looking for?"
             // placeholderTextColor="gray"
           />
         </View>
 
-        <Pressable style={styles.searchBtn} onPress={() => {}}>
+        <Pressable style={styles.searchBtn} onPress={handleClick}>
           <Image
             source={icons.search}
             resizeMode="contain"
@@ -44,7 +45,10 @@ const Welcome = () => {
               style={styles.tab(activeJobType, item)}
               onPress={() => {
                 setActiveJobType(item);
+                console.log('Before router.push:', item);
                 router.push(`/search/${item}`);
+                console.log('After router.push');
+                
               }}
             >
               <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
