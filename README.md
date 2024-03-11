@@ -8,6 +8,8 @@
 
 <img width="420" alt="Screenshot 2024-03-11 at 20 41 37" src="https://github.com/opoberezh/React-Native-Job-App/assets/124092276/54322028-e8ec-4764-8f43-136053789708">
 
+
+
 ## Opening React-Native Application by using Expo Go app
 
 <img width="500" alt="Screenshot 2024-03-11 at 20 38 43" src="https://github.com/opoberezh/React-Native-Job-App/assets/124092276/fd762ede-cf46-4ee4-90f7-5c7090b173bf">
